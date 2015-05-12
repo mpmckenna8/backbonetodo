@@ -40,6 +40,48 @@
     completed: true
   });
 
+
+
+
+
+  var TodosView = Backbone.View.extend({
+    tagName: 'ul', // required, but defaults to 'div' if not set
+    className: 'container', // optional, you can assign multiple classes to
+                            // this property like so: 'container homepage'
+    id: 'todos' // optional
+
+
+  });
+
+  var todosView = new TodosView();
+
+  console.log(todosView.el); // logs <ul id="todos" class="container"></ul>
+
+
+
+
+// We create two DOM elements representing buttons
+// which could easily be containers or something else
+var button1 = $('<button></button>');
+var button2 = $('<button></button>');
+
+// Define a new view
+var View = Backbone.View.extend({
+      events: {
+        click: function(e) {
+          console.log(view.el === e.target);
+        }
+      }
+    });
+
+
+
+var view = new Backbone.View;
+view.setElement('<p><a><b>test</b></a></p>');
+
+console.log(view.$('a b').html()); // outputs "test"
+
+
 </script>
 </body>
 </html>
