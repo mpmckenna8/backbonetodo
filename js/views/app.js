@@ -59,9 +59,12 @@ app.AppView = Backbone.View.extend({
 
     console.log(app.Todos.models)
 
+
+// in this if else is where I should show hide shift selecting thing.
     if ( app.Todos.length ) {
       this.$main.show();
       this.$footer.show();
+      $("#shifter").hide();
 
       this.$footer.html(this.statsTemplate({
         completed: completed,
@@ -75,6 +78,8 @@ app.AppView = Backbone.View.extend({
     } else {
       this.$main.hide();
       this.$footer.hide();
+      $("#shifter").show();
+
     }
 
     this.allCheckbox.checked = !remaining;
