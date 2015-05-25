@@ -29,7 +29,7 @@
        this.listenTo(this.model, 'change', this.render);
        this.listenTo(this.model, 'destroy', this.remove);        // NEW
        this.listenTo(this.model, 'visible', this.toggleVisible); // NEW
-       
+
      },
 
      // Re-render the titles of the todo item.
@@ -66,6 +66,8 @@
      edit: function() {
        this.$el.addClass('editing');
        this.$input.focus();
+       console.log('we in editing mode of.',  this);
+       console.log(this.$el)
      },
 
      // Close the `"editing"` mode, saving changes to the todo.

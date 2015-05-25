@@ -2,7 +2,9 @@ console.log('this shit is even loaded.')
 function makeshift(shift){
   for( i in shift){
     // will want to add a new model for each title in the shifts things.
-    console.log(shift[i])
+    console.log(shift[i]);
+    app.Todos.add({title:shift[i].title, completed:false});
+
   }
 
 }
@@ -14,6 +16,12 @@ $(".shifting").click(function(){
   console.log(this.textContent.replace(/\s+/g, ''))
   if (shiftclick == "Opener"){
     makeshift(opener)
+  }
+  else if (shiftclick == "Mid-shifter"){
+    makeshift(midshift)
+  }
+  else{
+    makeshift(closer)
   }
 
 })
