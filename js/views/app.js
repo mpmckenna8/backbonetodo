@@ -75,10 +75,14 @@ app.AppView = Backbone.View.extend({
         .removeClass('selected')
         .filter('[href="#/' + ( app.TodoFilter || '' ) + '"]')
         .addClass('selected');
-    } else {
-      this.$main.hide();
-      this.$footer.hide();
-      $("#shifter").show();
+    }
+
+    else {
+
+
+      //this.$main.hide();
+      //this.$footer.hide();
+      //$("#shifter").show();
 
     }
 

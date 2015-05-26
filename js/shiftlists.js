@@ -3,7 +3,7 @@ function makeshift(shift){
   for( i in shift){
     // will want to add a new model for each title in the shifts things.
     console.log(shift[i]);
-    app.Todos.add({title:shift[i].title, completed:false});
+    app.Todos.create({title:shift[i].title, completed:false});
 
   }
 
