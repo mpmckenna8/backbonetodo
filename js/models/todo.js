@@ -16,9 +16,20 @@ app.Todo = Backbone.Model.extend({
 
   // Toggle the `completed` state of this todo item.
   toggle: function() {
-    this.save({
-      completed: !this.get('completed')
-    });
+
+    console.log(this.get("title").slice(-5));
+    if(this.get("title").slice(-5 ) == "nezo!"){
+      this.save({
+        completed: !this.get('completed')
+      });
+
+    }
+    else{
+      this.save({
+        title: this.get("title") + "  --donezo!",
+        completed: !this.get('completed')
+      });
+    }
   }
 
 });

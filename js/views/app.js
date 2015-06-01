@@ -57,7 +57,7 @@ app.AppView = Backbone.View.extend({
     var completed = app.Todos.completed().length;
     var remaining = app.Todos.remaining().length;
 
-    console.log(app.Todos.models)
+    //console.log(app.Todos.models)
 
 
 // in this if else is where I should show hide shift selecting thing.
