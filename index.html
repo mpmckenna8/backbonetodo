@@ -59,7 +59,9 @@
     <div class="view">
       <input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
       <label><%= title %></label>
+      <button class="edit-btn"></button>
       <button class="destroy"></button>
+
     </div>
     <input class="edit" value="<%= title %>">
   </script>
@@ -85,8 +87,7 @@
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
   <script src="bower_components/backbone/backbone.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.16/backbone.localStorage.js">
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.16/backbone.localStorage.js"></script>
 
   <script src="js/shiftlists.js"></script>
 

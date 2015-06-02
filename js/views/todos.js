@@ -19,7 +19,8 @@
       'dblclick label': 'edit',
       'click .destroy': 'clear',           // NEW
       'keypress .edit': 'updateOnEnter',
-      'blur .edit': 'close'
+      'blur .edit': 'close',
+      'click .edit-btn': 'edit'
     },
 
     // The TodoView listens for changes to its model, re-rendering. Since there's
