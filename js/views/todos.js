@@ -20,7 +20,8 @@
       'click .destroy': 'clear',           // NEW
       'keypress .edit': 'updateOnEnter',
       'blur .edit': 'close',
-      'click .edit-btn': 'edit'
+      'click .edit-btn': 'edit',
+      'click .priority-btn': 'prioritize',
     },
 
     // The TodoView listens for changes to its model, re-rendering. Since there's
@@ -94,5 +95,10 @@
      // NEW - Remove the item, destroy the model from *localStorage* and delete its view.
      clear: function() {
        this.model.destroy();
+     },
+     prioritize: function(){
+       console.log(this)
+       this.$el.addClass('priority');
+
      }
    });
